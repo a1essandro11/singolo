@@ -6,6 +6,7 @@ body {
 }
 
 header {
+ 
   width: 100%;
   height: 89px;
 
@@ -44,7 +45,7 @@ header {
   opacity: 0.7;
 }
 
-.red {
+#star {
   color: #f06c64;
 }
 
@@ -69,6 +70,10 @@ header {
 
 .menu a:active {
   opacity: 0.5;
+  color: #f06c64;
+}
+.menu  a:focus {
+  color: #f06c64;
 }
 
 .menu ul {
@@ -86,7 +91,7 @@ header {
 .opacity-30 {
   opacity: 0.2;
 }
-
+/* 
 .slider {
   width: 100%;
   height: 594px;
@@ -152,7 +157,7 @@ header {
   height: 240px;
 
   background-image: url(assets/iPhone%20Horizontal.png);
-}
+} */
 
 .services {
   width: 100%;
@@ -372,6 +377,8 @@ header {
   flex-wrap: wrap;
   margin-top: -1px;
   overflow: hidden;
+  
+  
 }
 
 .portfolio__item {
@@ -387,20 +394,34 @@ header {
 }
 
 .portfolio__item>img {
+  
   transition: all 250ms ease-in-out;
 }
 
 .portfolio__item>img:hover {
   cursor: pointer;
+ 
 
   transform: scale(0.95);
 }
+/* ######################################################## */
 
-.portfolio__item>img:active {
-  opacity: 0.5;
+ 
 
-  transition: all 150ms ease-in-out;
-}
+  .portfolio__item.active img{
+    border:5px solid #F06C64;
+    border-radius: 3px;
+    transform: scale(0.95);
+    
+    
+  }
+
+  .portfolio__item.active {
+   
+    
+    transform: scale(0.95);
+  }
+/* ######################################################## */
 
 .about {
   width: 100%;
@@ -749,3 +770,174 @@ footer {
 .icon-linkedin {
   background-image: url(assets/icon-linkedin.png);
 }
+/* ##########################################################################################*/
+
+  
+#black_vert{
+  border-radius: 3px;
+ 
+  position: absolute;
+  margin-top: 117px;
+  margin-left: 67px;
+  background-color: transparent ;
+  width: 190px;
+  height: 335px;
+  transition: all ease 1s;
+}
+#vert_on{
+  margin-top: 460px;
+  margin-left: 140px;
+  position: absolute;
+  
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#black_hor{
+  border-radius: 3px;
+ 
+  position: absolute;
+  margin-top: 187px;
+  margin-left: 427px;
+  background-color: transparent ;
+  width: 334px;
+  height: 190px;
+  transition: all ease 1s;
+}
+
+#hor_on{
+  margin-top: 260px;
+  margin-left: 373px;
+  position: absolute;
+ 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#last_screen{
+  border-radius: 3px;
+ 
+  position: absolute;
+  margin-top: 117px;
+  margin-left: 1237px;
+  background-color: transparent ;
+  width: 190px;
+  height: 335px;
+  transition: all ease 1s;
+}
+
+#last_button{
+  margin-top: 458px;
+  margin-left: 1310px;
+  position: absolute;
+
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+
+#slider{
+  height: 595px;
+  display: block;
+  background-color: #f06c64;
+  border-bottom: 5px solid #ea676b;
+  transition: all ease 1s;
+}
+#slider_1{
+
+  width: 1020px;
+  margin: auto;
+  height: 595px;
+  display: block;
+
+}
+
+
+
+
+.prev{
+  margin-left: 42px;
+  margin-top: 281px;
+  display: block;
+  width: 16px;
+  float: left;
+  
+}
+
+#slider-content{
+  overflow: hidden;
+  float: left;
+  width: 906px;
+  display: block;
+  transition: all ease 1s;
+}
+.next{
+  margin-right: 40px;
+      margin-top: 278px;
+      display: block;
+      width: 16px;
+      float: right;
+      transform: rotate(180deg);
+  
+}
+
+#polosa{
+  width: 1812px;
+  position: relative;
+  background-color: #2d303a;
+  left: 0;
+  transition: all ease 1s;
+}
+
+
+.vert {
+width: 240px;
+  margin-top: 53px;
+margin-left: 54px;
+  float: left;
+
+}
+.horiz{
+  margin-top: 174px;
+  margin-left: 73px;
+  float: left;
+}
+.second_slide{
+  margin-top: 53px;
+  margin-left: 250px;
+  float: left;
+
+}
+
+
+#slider-left:hover {
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+
+#slider-left:active {
+  opacity: 0.4;
+}
+
+#slider-right:hover {
+  cursor: pointer;
+  opacity: 0.7;
+
+}
+
+#slider-right:active {
+  opacity: 0.4;
+}
+
+
+
+
+.menu #pick li.active a{ 
+  color: #f06c64;
+
+}
+

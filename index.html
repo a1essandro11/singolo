@@ -6,41 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/fonts.css">
+  <script src="script.js" defer></script>
   <title>Singolo</title>
 </head>
 
 <body>
   <header>
-    <div class="header__content">
+    <div id="header" class="header__content">
       <div class="logo">
         <div>
-          <h1><a href="#">SINGOLO<span class="red">*</span></a></h1>
+          <h1><a href="#">SINGOLO<span id="star">*</span></a></h1>
         </div>
       </div>
       <div class="menu">
-        <ul>
-          <li><a href="#">HOME</a></li>
+        <ul id="pick"> 
+          <li  class="#home"><a href="#" id="1" >HOME</a></li>
+          <li  class="opacity-30">&#183;</li>
+          <li class="#services"><a href="#services" id="2">SERVICES</a></li>
           <li class="opacity-30">&#183;</li>
-          <li><a href="#services">SERVICES</a></li>
+          <li class="#portfolio" ><a href="#portfolio" id="3">PORTFOLIO</a></li>
           <li class="opacity-30">&#183;</li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li class="#about"><a href="#about" id="4">ABOUT</a></li>
           <li class="opacity-30">&#183;</li>
-          <li><a href="#about">ABOUT</a></li>
-          <li class="opacity-30">&#183;</li>
-          <li><a href="#feedback">CONTACT</a></li>
+          <li class="#contact"> <a href="#contact" id="5">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </header>
+<div id="slider">
+  <div id="slider_1">         
+    <div class="prev"> <a href="#" id="slider-left"><img src="assets/arrow-left.svg" alt=""></a></div>
+    <div id="slider-content">
+            <div id="polosa">
+                <div class="vert"><img src="assets/iPhone Vertical.png" alt=""></div>
+                <a href="#"><div id="black_vert"></div></a>
+                <a href="#"><div id="vert_on"></div></a>
+                <div class="horiz"> <img  src="assets/iPhone Horizontal.png" alt=""></div> 
+                <a href="#"><div id="black_hor"></div></a>
+                <a href="#"><div id="hor_on"></div></a>
 
-  <div class="slider">
-    <div class="slider__content">
-      <div class="slider-arrow"></div>
-      <div class="slider-arrow right"></div>
-      <div class="iphone-v"></div>
-      <div class="iphone-h"></div>
+                <div class="second_slide"><img src="assets/Second Slide 1.png" alt=""></div>
+
+                <a href="#"><div id="last_screen"></div></a>
+                <a href="#"><div id="last_button"></div></a>
+                
+            </div>
     </div>
-  </div>
+    
+    <div class="next"><a href="#" id="slider-right"><img src="assets/arrow-left.svg" alt=""></a></div>
+
+
+</div>
+
+</div>
+  
 
   <div class="services" id="services">
     <div class="services__content">
@@ -108,24 +127,24 @@
       <div class="portfolio__subtitle subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
         lacinia odio sem nec elit.</div>
       <div class="portfolio__filter">
-        <button class="filter__item" autofocus>All</button>
-        <button class="filter__item">Web Design</button>
-        <button class="filter__item">Graphic Design</button>
-        <button class="filter__item">Artwork</button>
+        <button class="filter__item" autofocus onclick="shuffle()">All</button>
+        <button class="filter__item" onclick="shuffle()">Web Design</button>
+        <button class="filter__item" onclick="shuffle()">Graphic Design</button>
+        <button class="filter__item" onclick="shuffle()">Artwork</button>
       </div>
-      <div class="portfolio__table">
-        <div class="portfolio__item"><img src="assets/01.jpg" alt="01"></div>
-        <div class="portfolio__item"><img src="assets/02.jpg" alt="02"></div>
-        <div class="portfolio__item"><img src="assets/03.jpg" alt="03"></div>
-        <div class="portfolio__item"><img src="assets/04.jpg" alt="04"></div>
-        <div class="portfolio__item"><img src="assets/05.jpg" alt="05"></div>
-        <div class="portfolio__item"><img src="assets/06.jpg" alt="06"></div>
-        <div class="portfolio__item"><img src="assets/07.jpg" alt="07"></div>
-        <div class="portfolio__item"><img src="assets/08.jpg" alt="08"></div>
-        <div class="portfolio__item"><img src="assets/09.jpg" alt="09"></div>
-        <div class="portfolio__item"><img src="assets/10.jpg" alt="10"></div>
-        <div class="portfolio__item"><img src="assets/11.jpg" alt="11"></div>
-        <div class="portfolio__item"><img src="assets/12.jpg" alt="12"></div>
+      <div class="portfolio__table" id="portfolio__table">
+        <div class="portfolio__item" id="portfolio__item 1"><img src="assets/01.jpg" alt="01"></div>
+        <div class="portfolio__item" id="portfolio__item 2"><img src="assets/02.jpg" alt="02"></div>
+        <div class="portfolio__item" id="portfolio__item 3"><img src="assets/03.jpg" alt="03"></div>
+        <div class="portfolio__item" id="portfolio__item 4"><img src="assets/04.jpg" alt="04"></div>
+        <div class="portfolio__item" id="portfolio__item 5"><img src="assets/05.jpg" alt="05"></div>
+        <div class="portfolio__item" id="portfolio__item 6"><img src="assets/06.jpg" alt="06"></div>
+        <div class="portfolio__item" id="portfolio__item 7"><img src="assets/07.jpg" alt="07"></div>
+        <div class="portfolio__item" id="portfolio__item 8"><img src="assets/08.jpg" alt="08"></div>
+        <div class="portfolio__item" id="portfolio__item 9"><img src="assets/09.jpg" alt="09"></div>
+        <div class="portfolio__item" id="portfolio__item 10"><img src="assets/10.jpg" alt="10"></div>
+        <div class="portfolio__item" id="portfolio__item 11"><img src="assets/11.jpg" alt="11"></div>
+        <div class="portfolio__item" id="portfolio__item 12"><img src="assets/12.jpg" alt="12"></div>
       </div>
     </div>
   </div>
@@ -179,18 +198,18 @@
     </div>
   </div>
 
-  <div class="feedback" id="feedback">
+  <div class="feedback" id="contact">
     <div class="feedback__content">
       <div class="feedback__title title">Get a Quote</div>
       <div class="feedback__subtitle subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
         mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
         cursus commodo, tortor mauris condimentum nibh.</div>
-      <form action="#" class="form">
-        <input type="text" name="username" placeholder="Name (Required)" required>
-        <input type="email" name="email" placeholder="Email (Required)" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-        <input type="submit" value="Submit" class="form__submit">
+      <form id="f1" action="#" class="form">
+        <input type="text" id="name" name="username" placeholder="Name (Required)" required>
+        <input type="email" id="email" name="email" placeholder="Email (Required)" required>
+        <input id="subject" type="text" name="subject" placeholder="Subject">
+        <textarea id="describe" name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+        <input  type="submit" value="Submit" class="form__submit">
       </form>
 
       <div class="info">
