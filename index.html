@@ -3,63 +3,70 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/fonts.css">
-  <script src="script.js" defer></script>
+
   <title>Singolo</title>
 </head>
 
 <body>
   <header>
-    <div id="header" class="header__content">
+    <div class="header__content">
+      <div class="burger" onclick="switchMenu()">
+        <img src="assets/burger-menu-icon.png" alt="burger" width="25px" height="20px">
+      </div>
       <div class="logo">
         <div>
-          <h1><a href="#">SINGOLO<span id="star">*</span></a></h1>
+          <h1><a>SINGOLO<span class="red">*</span></a></h1>
         </div>
       </div>
       <div class="menu">
-        <ul id="pick"> 
-          <li  class="#home"><a href="#" id="1" >HOME</a></li>
-          <li  class="opacity-30">&#183;</li>
-          <li class="#services"><a href="#services" id="2">SERVICES</a></li>
+        <div class="logo sliding-logo">
+          <div>
+            <h1><a>SINGOLO<span class="red">*</span></a></h1>
+          </div>
+        </div>
+        <ul>
+          <li><a href="" onclick="return false" id="menu-home">HOME</a></li>
           <li class="opacity-30">&#183;</li>
-          <li class="#portfolio" ><a href="#portfolio" id="3">PORTFOLIO</a></li>
+          <li><a href="" onclick="return false" id="menu-serv">SERVICES</a></li>
           <li class="opacity-30">&#183;</li>
-          <li class="#about"><a href="#about" id="4">ABOUT</a></li>
+          <li><a href="" onclick="return false" id="menu-portf">PORTFOLIO</a></li>
           <li class="opacity-30">&#183;</li>
-          <li class="#contact"> <a href="#contact" id="5">CONTACT</a></li>
+          <li><a href="" onclick="return false" id="menu-about">ABOUT</a></li>
+          <li class="opacity-30">&#183;</li>
+          <li><a href="" onclick="return false" id="menu-contact">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </header>
-<div id="slider">
-  <div id="slider_1">         
-    <div class="prev"> <a href="#" id="slider-left"><img src="assets/arrow-left.svg" alt=""></a></div>
-    <div id="slider-content">
-            <div id="polosa">
-                <div class="vert"><img src="assets/iPhone Vertical.png" alt=""></div>
-                <a href="#"><div id="black_vert"></div></a>
-                <a href="#"><div id="vert_on"></div></a>
-                <div class="horiz"> <img  src="assets/iPhone Horizontal.png" alt=""></div> 
-                <a href="#"><div id="black_hor"></div></a>
-                <a href="#"><div id="hor_on"></div></a>
 
-                <div class="second_slide"><img src="assets/Second Slide 1.png" alt=""></div>
-
-                <a href="#"><div id="last_screen"></div></a>
-                <a href="#"><div id="last_button"></div></a>
-                
-            </div>
+  <div class="slider" id="slider">
+    <div class="slider__content">
+      <div class="slider-arrow" id="arrow-left"></div>
+      <div class="slider-arrow right" id="arrow-right"></div>
+      <div class="slide active">
+        <div class="slide1">
+          <div class="iphone-v">
+            <div class="iphone-mask" onclick="switchOnOff(1)"></div>
+          </div>
+          <div id="iphone-v-off" class="hidden" onclick="switchOnOff(1)">
+            <img src="assets/iphone_v_off.png" alt="off" width="100%" height="100%">
+          </div>
+          <div class="iphone-h">
+            <div class="iphone-mask rotate90" onclick="switchOnOff(2)"></div>
+          </div>
+          <div id="iphone-h-off" class="hidden" onclick="switchOnOff(2)">
+            <img src="assets/iphone_v_off.png" alt="off" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+      <div class="slide next" id="slide2">
+        <img src="assets/Slide2.png" alt="">
+      </div>
     </div>
-    
-    <div class="next"><a href="#" id="slider-right"><img src="assets/arrow-left.svg" alt=""></a></div>
-
-
-</div>
-
-</div>
-  
+  </div>
 
   <div class="services" id="services">
     <div class="services__content">
@@ -127,24 +134,24 @@
       <div class="portfolio__subtitle subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
         lacinia odio sem nec elit.</div>
       <div class="portfolio__filter">
-        <button class="filter__item" autofocus onclick="shuffle()">All</button>
-        <button class="filter__item" onclick="shuffle()">Web Design</button>
-        <button class="filter__item" onclick="shuffle()">Graphic Design</button>
-        <button class="filter__item" onclick="shuffle()">Artwork</button>
+        <button class="filter__item">All</button>
+        <button class="filter__item">Web Design</button>
+        <button class="filter__item">Graphic Design</button>
+        <button class="filter__item">Artwork</button>
       </div>
-      <div class="portfolio__table" id="portfolio__table">
-        <div class="portfolio__item" id="portfolio__item 1"><img src="assets/01.jpg" alt="01"></div>
-        <div class="portfolio__item" id="portfolio__item 2"><img src="assets/02.jpg" alt="02"></div>
-        <div class="portfolio__item" id="portfolio__item 3"><img src="assets/03.jpg" alt="03"></div>
-        <div class="portfolio__item" id="portfolio__item 4"><img src="assets/04.jpg" alt="04"></div>
-        <div class="portfolio__item" id="portfolio__item 5"><img src="assets/05.jpg" alt="05"></div>
-        <div class="portfolio__item" id="portfolio__item 6"><img src="assets/06.jpg" alt="06"></div>
-        <div class="portfolio__item" id="portfolio__item 7"><img src="assets/07.jpg" alt="07"></div>
-        <div class="portfolio__item" id="portfolio__item 8"><img src="assets/08.jpg" alt="08"></div>
-        <div class="portfolio__item" id="portfolio__item 9"><img src="assets/09.jpg" alt="09"></div>
-        <div class="portfolio__item" id="portfolio__item 10"><img src="assets/10.jpg" alt="10"></div>
-        <div class="portfolio__item" id="portfolio__item 11"><img src="assets/11.jpg" alt="11"></div>
-        <div class="portfolio__item" id="portfolio__item 12"><img src="assets/12.jpg" alt="12"></div>
+      <div class="portfolio__table">
+        <div class="portfolio__item"><img src="assets/01.jpg" alt="01"></div>
+        <div class="portfolio__item"><img src="assets/02.jpg" alt="02"></div>
+        <div class="portfolio__item"><img src="assets/03.jpg" alt="03"></div>
+        <div class="portfolio__item"><img src="assets/04.jpg" alt="04"></div>
+        <div class="portfolio__item"><img src="assets/05.jpg" alt="05"></div>
+        <div class="portfolio__item"><img src="assets/06.jpg" alt="06"></div>
+        <div class="portfolio__item"><img src="assets/07.jpg" alt="07"></div>
+        <div class="portfolio__item"><img src="assets/08.jpg" alt="08"></div>
+        <div class="portfolio__item"><img src="assets/09.jpg" alt="09"></div>
+        <div class="portfolio__item"><img src="assets/10.jpg" alt="10"></div>
+        <div class="portfolio__item"><img src="assets/11.jpg" alt="11"></div>
+        <div class="portfolio__item"><img src="assets/12.jpg" alt="12"></div>
       </div>
     </div>
   </div>
@@ -157,59 +164,60 @@
         cursus commodo, tortor mauris condimentum nibh.</div>
       <div class="about__row">
         <div class="about__item">
-          <div class="about__photo"><img src="assets/about-01.png" alt="Adam Jensen" width="300" height="300"></div>
+          <div class="about__photo"><img src="assets/about-01.png" alt="Adam Jensen" width="100%"></div>
           <div class="about__name">Adam Jensen</div>
           <div class="about__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec
             rutrum
             tellus dolor id lorem.</div>
           <div class="about__social-icons social-icons">
-            <div class="icon-fb"></div>
-            <div class="icon-google"></div>
-            <div class="icon-twitter"></div>
-            <div class="icon-linkedin"></div>
+            <div class="icon-fb"><img src="assets/icon-fb.png" alt="fb" width="8px" height="14px"></div>
+            <div class="icon-google"><img src="assets/icon-google.png" alt="gl" width="14px" height="14px"></div>
+            <div class="icon-twitter"><img src="assets/icon-twitter.png" alt="tw" width="14px" height="12px"></div>
+            <div class="icon-linkedin"><img src="assets/icon-linkedin.png" alt="in" width="14px" height="14px"></div>
           </div>
         </div>
         <div class="about__item">
-          <div class="about__photo"><img src="assets/about-02.png" alt="Desmond Miles" width="300" height="300"></div>
+          <div class="about__photo"><img src="assets/about-02.png" alt="Desmond Miles" width="100%"></div>
           <div class="about__name">Desmond Miles</div>
           <div class="about__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
             viverra lacus ut, ultrices velit.</div>
           <div class="about__social-icons social-icons">
-            <div class="icon-fb"></div>
-            <div class="icon-google"></div>
-            <div class="icon-twitter"></div>
-            <div class="icon-linkedin"></div>
+            <div class="icon-fb"><img src="assets/icon-fb.png" alt="fb" width="8px" height="14px"></div>
+            <div class="icon-google"><img src="assets/icon-google.png" alt="gl" width="14px" height="14px"></div>
+            <div class="icon-twitter"><img src="assets/icon-twitter.png" alt="tw" width="14px" height="12px"></div>
+            <div class="icon-linkedin"><img src="assets/icon-linkedin.png" alt="in" width="14px" height="14px"></div>
           </div>
         </div>
         <div class="about__item">
-          <div class="about__photo"><img src="assets/about-03.png" alt="Scolara Visari" width="300" height="300"></div>
+          <div class="about__photo"><img src="assets/about-03.png" alt="Scolara Visari" width="100%"></div>
           <div class="about__name">Scolara Visari</div>
           <div class="about__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
             consequat
             felis. Quisque condimentum.</div>
           <div class="about__social-icons social-icons">
-            <div class="icon-fb"></div>
-            <div class="icon-google"></div>
-            <div class="icon-twitter"></div>
-            <div class="icon-linkedin"></div>
+            <div class="icon-fb"><img src="assets/icon-fb.png" alt="fb" width="8px" height="14px"></div>
+            <div class="icon-google"><img src="assets/icon-google.png" alt="gl" width="14px" height="14px"></div>
+            <div class="icon-twitter"><img src="assets/icon-twitter.png" alt="tw" width="14px" height="12px"></div>
+            <div class="icon-linkedin"><img src="assets/icon-linkedin.png" alt="in" width="14px" height="14px"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="feedback" id="contact">
+  <div class="feedback" id="feedback">
     <div class="feedback__content">
       <div class="feedback__title title">Get a Quote</div>
       <div class="feedback__subtitle subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
         mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
         cursus commodo, tortor mauris condimentum nibh.</div>
-      <form id="f1" action="#" class="form">
-        <input type="text" id="name" name="username" placeholder="Name (Required)" required>
-        <input type="email" id="email" name="email" placeholder="Email (Required)" required>
-        <input id="subject" type="text" name="subject" placeholder="Subject">
-        <textarea id="describe" name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-        <input  type="submit" value="Submit" class="form__submit">
+      <form action="#" class="form" id="myForm" onsubmit="sendForm()">
+        <input type="text" name="username" placeholder="Name (Required)" required>
+        <input type="email" name="email" placeholder="Email (Required)" required>
+        <input type="text" name="subject" placeholder="Subject" id="subject">
+        <textarea name="details" id="describe" cols="30" rows="10" placeholder="Describe your project in detail..."
+          maxlength="700"></textarea>
+        <input type="submit" id="btn" value="Submit" class="form__submit">
       </form>
 
       <div class="info">
@@ -242,19 +250,36 @@
           </div>
         </div>
       </div>
+      <div class="clearfix" style="width: 100%; clear: both;"></div>
     </div>
   </div>
 
+  <div id="message-block" class="hidden">
+    <div id="message">
+      <p>Письмо отправлено</p>
+      <p><span id="result-subject"></span></p>
+      <p><span id="result-describe"></span></p>
+      <br>
+      <button id="close-btn">OK</button>
+      <p></p>
+
+    </div>
+  </div>
+
+  <div id="menu-block" class="hidden" onclick="hideMenu()"></div>
+
   <footer>
     <div class="footer__content">
-      <div class="copyright">© Copyright 2013</div>
+      <div class="copyright">© Copyright 2013 · by PSDchat.com</div>
       <div class="footer__social-icons social-icons">
-        <div class="icon-fb"></div>
-        <div class="icon-google"></div>
-        <div class="icon-twitter"></div>
-        <div class="icon-linkedin"></div>
+        <div class="icon-fb"><img src="assets/icon-fb.png" alt="fb" width="8px" height="14px"></div>
+        <div class="icon-google"><img src="assets/icon-google.png" alt="gl" width="14px" height="14px"></div>
+        <div class="icon-twitter"><img src="assets/icon-twitter.png" alt="tw" width="14px" height="12px"></div>
+        <div class="icon-linkedin"><img src="assets/icon-linkedin.png" alt="in" width="14px" height="14px"></div>
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
